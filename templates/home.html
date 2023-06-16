@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>This is your message</h1>
+    <div class="list-group">
+        {% for message in message_list %}
+            <a href="#" class="list-group-item list-group-item-action">{{ message.text }}</a>
+        {% endfor %}
+    </div>
 {% endblock content %}
